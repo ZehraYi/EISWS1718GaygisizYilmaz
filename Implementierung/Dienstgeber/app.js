@@ -10,6 +10,7 @@ var monk = require('monk');
 
 var index = require('./routes/index');
 var eventRoute = require('./routes/eventRoute');
+var locationRoute = require('./routes/locationRoute');
 
 var app = express();
 var server = http.createServer(app);
@@ -42,7 +43,8 @@ var server = app.listen(8181, function () {
     var port = server.address().port;
     console.log("Event Application at http://127.0.0.1:%s", port);
 });
-index.register(app);
 
+index.register(app);
 eventRoute.register(app);
+locationRoute.register(app);
 
