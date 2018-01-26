@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+      <title>Bootstrap Example</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+       <script src="js/main.js"></script>
+       <link rel="stylesheet" href="css/main.css">
+
+       <style>
+       body {
+           position: relative;
+       }
+       #section1 {padding-top:50px;height:1000px;color: #fff; background-color: #1E88E5;}
+       #section2 {padding-top:50px;height:1000px;color: #fff; background-color: #673ab7;}
+       #section3 {padding-top:50px;height:1000px;color: #fff; background-color: #ff9800;}
+       #section41 {padding-top:50px;height:1000px;color: #fff; background-color: #00bcd4;}
+       #section42 {padding-top:50px;height:1000px;color: #fff; background-color: #009688;}
+       </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">EventIT</a>
+          </div>
+          <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a data-toggle="modal" data-target="#myModal">Event</a></li>
+                <li><a href="#section1">Location</a></li>
+                <li><a href="#section2">Catering</a></li>
+                <li><a href="#section3">DJ  </a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#section41">Section 4-1</a></li>
+                    <li><a href="#section42">Section 4-2</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+      <div id="form" class="container-fluid">
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="row">
+                <div class="modal-header col-12">
+                  <div class="">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="col-11">
+                    <h4 class="modal-title text-center">Event erstellen</h4>
+                  </div>
+                </div>
+
+              </div>
+                <div class="row">
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="eventName">Eventname</label>
+                        <input type="text" class="form-control" id="eventName" aria-describedby="eventHelp" placeholder="musterEvent">
+                        <small id="eventHelp" class="form-text text-muted">Geben sie den Namen des zu erstellenden Events ein</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="personNumber">Personenanzahl</label>
+                        <input type="number" step="any" min="0" class="form-control" aria-describedby="personHelp" id="personNumber" placeholder="0">
+                        <small id="personHelp" class="form-text text-muted">Geben sie den die Anzahl der Personen an</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="budget">Budget</label>
+                        <input type="number" step="any" min="0" class="form-control" aria-describedby="budgetHelp" id="budget" placeholder="0">
+                        <small id="budgetHelp" class="form-text text-muted">Geben Sie ihr verfügbares Budget ein</small>
+                      </div>
+                      <div class="form-group">
+                        <div class="dropdown">
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Genre
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                          </div>
+                          <small id="eventHelp" class="form-text text-muted">Wählen Sie die Genre des Events aus</small>
+                        </div>
+                      </div>
+                      <button type="submit" onclick="appFunction.sendEventPlan()" data-dismiss="modal" id="submitButton"  class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+            <!--  <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>-->
+            </div>
+
+            </div>
+          </div>
+      </div>
+      <div id="section1" class="container-fluid">
+        <div class="section container">
+          <div class="row overflowed">
+            <div class="col-md-9">
+              <div class="row"  id="locationResults">
+
+              </div>
+              <div class="col-md-3 childdiv">
+                <div id="map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="section2" class="container-fluid">
+        <div class="section container">
+          <div class="row overflowed">
+            <div class="col-md-9">
+              <div class="row"  id="djResults">
+
+              </div>
+              <div class="col-md-3 childdiv">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section3" class="container-fluid">
+        <div class="section container">
+          <div class="row overflowed">
+            <div class="col-md-9">
+              <div class="row"  id="catererResults">
+
+              </div>
+              <div class="col-md-3 childdiv">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section41" class="container-fluid">
+        <h1>Section 4 Submenu 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+      <div id="section42" class="container-fluid">
+        <h1>Section 4 Submenu 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-iJ40kDj2LBzze-nvhWhDma9buLPJk9Y&callback=initMap">
+      </script>
+
+    </body>
+</html>
+<!-- <div class="col-sm-12 col-md-6">
+  <div class="thumbnail">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <div class="row"></div>
+        <div class="col-3">
+          <img src="https://www.seegebiet-mansfelder-land.de/de/datei/zuschneiden/200x200/id/6472,1166/B%C3%BCrgersaal-17.JPG" alt="...">
+        </div>
+        <div class="col-9">
+          <p><b>Beschreibung: </b>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet</p>
+          <p><b>Genres: </b>x,y,z</p>
+          <p><b>Adresse: </b>abc.22</p>
+          <p><b>Webseite: </b>www.test.de</p>
+        </div>
+      <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+    </div>
+  </div>
+</div>
+<div class="col-sm-12 col-md-6">
+  <div class="thumbnail">
+    <img src="..." alt="...">
+    <div class="caption">
+      <h3>Thumbnail label</h3>
+      <p>...</p>
+      <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+    </div>
+  </div>
+</div>
+</div> -->
