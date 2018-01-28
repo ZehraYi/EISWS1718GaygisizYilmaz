@@ -1,0 +1,15 @@
+{ "_id" : { "$oid" : "5a073b8d785d316983668eed" }, "id" : 1, "name" : "event5", "totalBudget" : 500, "locationbudget" : 300, "dj" : 100, "catering" : 100 }
+{ "_id" : { "$oid" : "5a073ba6785d316983668eee" }, "id" : 2, "name" : "event2", "totalBudget" : 100, "locationbudget" : 600, "dj" : 200, "catering" : 200 }
+{ "_id" : { "$oid" : "5a073bb7785d316983668eef" }, "id" : 3, "name" : "event3", "totalBudget" : 1300, "locationbudget" : 500, "dj" : 350, "catering" : 350 }
+{ "_id" : { "$oid" : "5a4cf2bbc60c9d158b2b5b36" }, "id" : 4, "name" : "event5", "totalBudget" : 2500, "locationbudget" : 1500, "dj" : 500, "catering" : 500 }
+{ "_id" : { "$oid" : "5a4cf2ccc60c9d158b2b5b37" }, "name" : "event5", "id" : 5, "totalBudget" : 2000, "locationbudget" : 1500, "dj" : 250, "catering" : 250 }
+{ "_id" : { "$oid" : "5a4cf365c60c9d158b2b5b38" }, "id" : 6, "name" : "event6", "totalBudget" : 1700, "locationbudget" : 1300, "dj" : 150, "catering" : 250 }
+{ "_id" : { "$oid" : "5a4cf37ec60c9d158b2b5b39" }, "id" : 7, "name" : "event7", "totalBudget" : 1800, "locationbudget" : 1400, "dj" : 200, "catering" : 200 }
+{ "_id" : { "$oid" : "5a4cf38cc60c9d158b2b5b3a" }, "id" : 8, "name" : "event8", "totalBudget" : 2100, "locationbudget" : 1500, "dj" : 300, "catering" : 300 }
+{ "_id" : { "$oid" : "5a6e395788a16ebbd2172387" }, "id" : 9, "name" : "event9", "totalBudget" : 1400, "locationbudget" : 700, "dj" : 400, "catering" : 300 }
+{ "_id" : { "$oid" : "5a6e39c288a16ebbd2172388" }, "id" : 10, "name" : "event10", "totalBudget" : 1700, "locationbudget" : 1300, "dj" : 200, "catering" : 200 }
+{ "_id" : { "$oid" : "5a6e453f88a16ebbd2172389" }, "id" : 11, "name" : "event11", "totalBudget" : 3600, "locationbudget" : 2400, "dj" : 600, "catering" : 600 }
+{ "_id" : { "$oid" : "5a6e456788a16ebbd217238a" }, "id" : 12, "name" : "event12", "totalBudget" : 1900, "locationbudget" : 700, "dj" : 700, "catering" : 500 }
+{ "_id" : { "$oid" : "5a6e45a588a16ebbd217238b" }, "id" : 13, "name" : "event13", "totalBudget" : 2500, "locationbudget" : 1500, "dj" : 500, "catering" : 500 }
+{ "_id" : { "$oid" : "5a6e45b688a16ebbd217238c" }, "id" : 13, "name" : "event13", "totalBudget" : 3000, "locationbudget" : 2400, "dj" : 300, "catering" : 300 }
+{ "_id" : { "$oid" : "5a6e45cc88a16ebbd217238d" }, "id" : 15, "name" : "event15", "totalBudget" : 100, "locationbudget" : 500, "dj" : 250, "catering" : 250 }
